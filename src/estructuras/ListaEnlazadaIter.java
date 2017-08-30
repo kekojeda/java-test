@@ -112,10 +112,10 @@ public class ListaEnlazadaIter implements ListaIter {
         else{
             ListaEnlazadaIter itr = new ListaEnlazadaIter(laLista);
             for( ; itr.estaAdentro(); itr.avanzar()){
-                System.out.print(itr.recuperar()+ "");
+                System.out.println(itr.recuperar()+ "");
             }
         }
-        System.out.println("FIN DEL CLIENTE");
+        System.out.println("FIN Impresion Lista");
     }
     
 }

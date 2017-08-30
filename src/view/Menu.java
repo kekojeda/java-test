@@ -29,13 +29,15 @@ public class Menu {
             switch (opcion){
                 case 1:App.cargarCsv();
                 break;
-                case 2:App.vaciasActividades();
+                case 2:App.vaciarLista();//App.vaciasActividades();
                 break;
                 case 3: App.ingresarActividad();
                 break;
-                case 4: App.listaActividades();
+                case 4: 
                 break;
-                case 5:// App.();
+                case 5: 
+                break;
+                case 6: App.imprimirLista();//listaActividades();
                 break;
                 case 9: flag=false;
             }
@@ -50,9 +52,9 @@ public class Menu {
 			System.out.println("1) Inicializar y Cargar archivo de entradade tabla de actividades   \n");
 			System.out.println("2) Vaciar Tabla de Actividades  \n");
 			System.out.println("3) Cargar Actividad manual \n");
-                        System.out.println("4) Listar Actividades  \n");
-			System.out.println("4) Generar Grafo y mostrar Matriz de Adyacencia  \n");
+                        System.out.println("4) Generar Grafo y mostrar Matriz de Adyacencia  \n");
                         System.out.println("5) Mostrar camino critico  \n");
+                        System.out.println("6) Listar Actividades  \n");
 			System.out.println("9) Salir  \n");
     }
     

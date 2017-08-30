@@ -30,13 +30,11 @@ public class App {
 
     
     
-//    ListaEnlazada lista = new ListaEnlazada();
-//    ListaEnlazadaIter listaIter = new ListaEnlazadaIter(lista); 
-//    ListaEnlazadaIterOrd listaOrd = new ListaEnlazadaIterOrd(lista);
+    static ListaEnlazada lista = new ListaEnlazada();
+    static ListaEnlazadaIter listaIter = new ListaEnlazadaIter(lista); 
+
 //    
-//    public static void setActividades(Actividad al){
-//        listaIter.insertar(al);
-//    }
+    
     
     static Vector<Actividad> arrayActividades = new Vector<Actividad>();
         
@@ -46,7 +44,9 @@ public class App {
         public static void setActividades(Actividad al){
         arrayActividades.add(al);
         }
-        
+        /*
+        Con vector
+        */
         public static void listaActividades(){
          for(int i=0; i<arrayActividades.size();i++){
              System.out.println(arrayActividades.get(i));
@@ -54,6 +54,24 @@ public class App {
      }
         public static void vaciasActividades(){
             arrayActividades.clear();
+        }
+        /*
+        FIN
+        */
+        
+        /*
+        Con Lista
+        */
+        public static void setActividadesLista(Actividad al){
+        listaIter.insertar(al);
+   }
+        
+        public static void imprimirLista(){
+            listaIter.imprimir(lista);
+        }
+        
+         public static void vaciarLista(){
+             lista.vaciar();
         }
     
         public static void ingresarActividad() throws MiExcepcion{
@@ -72,7 +90,8 @@ public class App {
        
        Actividad act = new Actividad(codigo, nombre, dependencias, duracionDias);
              
-       App.setActividades(act);
+        App.setActividadesLista(act);
+    //App.setActividades(act);
        }
        catch(Exception e){
 			
@@ -100,7 +119,8 @@ public class App {
                 int duracionDias = Integer.parseInt(datos[3]);
                 
                 Actividad act = new Actividad(codigo, nombre, dependencias, duracionDias);
-                setActividades(act);
+                //setActividades(act);
+                setActividadesLista(act);
                        
                 
 
@@ -122,7 +142,7 @@ public class App {
     }
     
     public static void main(String[] args) throws MiExcepcion {
-        // TODO code application logic here
+        // TODO code application logic hereAAAAAAAAAAAAAAAAAAAAAAA
         Menu.menu();
     }
     
