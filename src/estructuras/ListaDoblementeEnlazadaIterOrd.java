@@ -25,15 +25,7 @@ public class ListaDoblementeEnlazadaIterOrd extends ListaDoblementeEnlazadaIter 
     
 
    
-    public void insertar(Object obj)  {
-		if (!Comparable.class.isInstance(obj))
-			try {
-                            throw new ComparableNoImplementadaException("Interfaz comparable no implementada");
-                } catch (ComparableNoImplementadaException ex) {
-                    Logger.getLogger(ListaDoblementeEnlazadaIterOrd.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                else insertar(obj);
-    }
+  
     
   
     public void insertar( Comparable x )
